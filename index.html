@@ -29,14 +29,14 @@
     </div>
 
 
-    <form>
+    <form id="my-form">
         <fieldset>
             <div class="fieldset-wrapper">
                 <legend>Informações do Evento</legend>
 
                 <div class="input-wrapper">
                     <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
-                    <input type=" text" id="event-title" />
+                    <input type=" text" id="event-title" required minlength="8"/>
                 </div>
 
                 <div class="input-wrapper">
@@ -47,7 +47,7 @@
 
                 <div class="input-wrapper">
                     <label for="event-whatsapp">WhatsApp para contato <span>(somente números)</span></label>
-                    <input type="number" id="event-link" />
+                    <input type="number" id="event-link" required />
                 </div>
 
 
@@ -75,13 +75,13 @@
                 <legend>Privacidade</legend>
                 <div class="input-wrapper">
                     <label for="event-email">Email do administrador<span>(digite um e-mail válido)</span></label>
-                    <input type=" text" id="event-email" />
+                    <input type=" text" id="event-email" required />
                 </div>
 
                 <div class="input-wrapper">
                     <label for="event-password">Senha de acesso para participantes <span>(mínimo 8
                             caracteres)</span></label>
-                    <input type="password" id="event-password" />
+                    <input type="password" id="event-password" required minlength="8"/>
                 </div>
 
                 <div class="checkbox-wrapper">
@@ -98,22 +98,26 @@
 
                     <div class="input-wrapper">
                         <label for="event-date">Data</span></label>
-                        <input type="date" id="event-data" />
+                        <input type="date" id="event-data"required />
                     </div>
 
                     <div class="input-wrapper">
                         <label for="event-begin"> <span>Das</span></label>
-                        <input type="time" id="event-begin" />
+                        <input type="time" id="event-begin" required/>
                     </div>
                     <div class="input-wrapper">
                         <label for="event-end"><span>Até</span></label>
-                        <input type="time" id="event-end" />
+                        <input type="time" id="event-end" required />
                     </div>
                 </div>
             </div>
         </fieldset>
 
     </form>
+
+    <footer >
+        <button class="button"  form="my-form">Salvar Evento </button>
+    </footer>
 </body>
 
 </html>
